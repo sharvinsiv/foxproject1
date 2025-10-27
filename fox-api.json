@@ -1,0 +1,52 @@
+{
+  "photos": [
+    {
+      "id": 1,
+      "name": "Fox",
+      "date": "2025-10-25",
+      "thumbnail": "https://randomfox.ca/images/1.jpg",
+      "full": "https://randomfox.ca/images/1.jpg",
+      "author": { "name": "Jane Doe" }
+    },
+    {
+      "id": 2,
+      "name": "Fox",
+      "date": "2025-10-25",
+      "thumbnail": "https://randomfox.ca/images/2.jpg",
+      "full": "https://randomfox.ca/images/2.jpg",
+      "author": { "name": "John Doe" }
+    },
+    {
+      "id": 3,
+      "name": "Fox",
+      "date": "2025-10-25",
+      "thumbnail": "https://randomfox.ca/images/3.jpg",
+      "full": "https://randomfox.ca/images/3.jpg",
+      "author": { "name": "Fox Faux" }
+    },
+    {
+      "id": 4,
+      "name": "Fox",
+      "date": "2025-10-25",
+      "thumbnail": "https://randomfox.ca/images/4.jpg",
+      "full": "https://randomfox.ca/images/4.jpg",
+      "author": { "name": "Jane Doe" }
+    },
+    {
+      "id": 5,
+      "name": "Fox",
+      "date": "2025-10-25",
+      "thumbnail": "https://randomfox.ca/images/5.jpg",
+      "full": "https://randomfox.ca/images/5.jpg",
+      "author": { "name": "John Doe" }
+    },
+    {
+      "id": 6,
+      "name": "Fox",
+      "date": "2025-10-25",
+      "thumbnail": "https://randomfox.ca/images/6.jpg",
+      "full": "https://randomfox.ca/images/6.jpg",
+      "author": { "name": "Fox Faux" }
+    }
+  ]
+}
