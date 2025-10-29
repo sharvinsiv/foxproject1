@@ -35,13 +35,13 @@ export class FoxPhotoGallery extends LitElement {
 
   connectedCallback() {
     super.connectedCallback();
-    // choose random fox on load
+
     this.loadRandomFox();
   }
 
   async loadRandomFox() {
     try {
-      // Sometimes randomfox.ca breaks, so add fallback
+      
       const res = await fetch('https://randomfox.ca/floof/');
       const data = await res.json();
       this.photo = {
