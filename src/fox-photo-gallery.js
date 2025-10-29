@@ -76,7 +76,7 @@ export class FoxPhotoGallery extends LitElement {
     return html`
       <fox-photo-card .image=${this.photo}></fox-photo-card>
       <div style="margin-top: 1rem;">
-        <button @click=${this.refreshFox}>Show Another Fox</button>
+        <button @click=${this.refreshFox}>Show Me Another Fox!!</button>
       </div>
     `;
   }
