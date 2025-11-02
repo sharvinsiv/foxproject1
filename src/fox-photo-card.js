@@ -4,56 +4,17 @@ export class FoxPhotoCard extends LitElement {
   static properties = {
     image: { type: Object },
     liked: { type: Boolean },
-    disliked: { type: Boolean }
+    disliked: { type: Boolean },
   };
 
   static styles = css`
-    :host {
-      display: block;
-      width: 350px;
-      margin: 0 auto;
-      border-radius: 10px;
-      background: #fff;
-      box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
-      overflow: hidden;
-      font-family: Arial, sans-serif;
-    }
-
-    img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .info {
-      padding: 10px;
-    }
-
-    .author {
-      margin-bottom: 10px;
-      font-size: 14px;
-      color: #444;
-    }
-
-    .actions {
-      display: flex;
-      justify-content: space-around;
-      border-top: 1px solid #ccc;
-      padding: 8px 0;
-    }
-
-    button {
-      background: none;
-      border: 1px solid #aaa;
-      border-radius: 5px;
-      padding: 5px 10px;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    button:hover {
-      background-color: #f3f3f3;
-    }
+    :host { display: block; width: 350px; margin: 0 auto; border-radius: 10px; background: #fff; box-shadow: 0px 3px 6px rgba(0,0,0,0.1); overflow: hidden; font-family: Arial, sans-serif; }
+    img { width: 100%; height: auto; display: block; }
+    .info { padding: 10px; }
+    .author { margin-bottom: 10px; font-size: 14px; color: #444; }
+    .actions { display: flex; justify-content: space-around; border-top: 1px solid #ccc; padding: 8px 0; }
+    button { background: none; border: 1px solid #aaa; border-radius: 5px; padding: 5px 10px; cursor: pointer; font-size: 14px; }
+    button:hover { background-color: #f3f3f3; }
   `;
 
   constructor() {
@@ -64,7 +25,6 @@ export class FoxPhotoCard extends LitElement {
   }
 
   firstUpdated() {
-    // load like/dislike if saved
     const saved = localStorage.getItem(this.image.full);
     if (saved) {
       const data = JSON.parse(saved);
@@ -86,10 +46,7 @@ export class FoxPhotoCard extends LitElement {
   }
 
   save() {
-    localStorage.setItem(this.image.full, JSON.stringify({
-      liked: this.liked,
-      disliked: this.disliked
-    }));
+    localStorage.setItem(this.image.full, JSON.stringify({ liked: this.liked, disliked: this.disliked }));
   }
 
   share() {

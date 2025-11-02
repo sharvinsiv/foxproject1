@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@web/dev-server": "^0.4.2",
-    "rollup": "^3.29.0"
+    "rollup": "^3.29.0",
+    "rollup-plugin-serve": "^3.0.0"
   }
 }

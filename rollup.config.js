@@ -1,20 +1,21 @@
-import resolve from '@rollup/plugin-node-resolve';
 import serve from 'rollup-plugin-serve';
-import livereload from 'rollup-plugin-livereload';
+import { terser } from 'rollup-plugin-terser';
+
+const isDev = process.env.NODE_ENV === 'development';
 
 export default {
-  input: 'src/fox-photo-gallery.js',
+  input: 'src/main.js',
   output: {
     file: 'dist/bundle.js',
-    format: 'es'
+    format: 'iife',
+    sourcemap: isDev,
   },
   plugins: [
-    resolve(),
-    serve({
+    isDev && serve({
       open: true,
-      contentBase: ['src', '.'],
-      port: 8001
+      contentBase: ['dist'],
+      port: 3000
     }),
-    livereload()
-  ]
+    terser()
+  ].filter(Boolean)
 };
