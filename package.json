@@ -5,14 +5,12 @@
   "type": "module",
   "scripts": {
     "start": "npx web-dev-server --open --node-resolve",
-    "build": "rollup -c"
+    "build": "echo 'No build step needed'"
   },
   "dependencies": {
     "lit": "^3.1.0"
   },
   "devDependencies": {
-    "@web/dev-server": "^0.4.2",
-    "rollup": "^3.29.0",
-    "rollup-plugin-serve": "^3.0.0"
+    "@web/dev-server": "^0.4.2"
   }
 }
